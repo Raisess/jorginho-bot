@@ -1,9 +1,10 @@
 const expressions = require('../data/expressions.json');
+const responses = require('../data/responses.json');
 
 module.exports = (client, channel, user, message) => {
-  for (let expression of expressions) {
-    if (message.toLowerCase() === expression) {
-      client.say(channel, `@${user.username}${expression}`);
+  for (let i = 0; i < expressions.length; i++) {
+    if (message.toLowerCase() === expressions[i]) {
+      client.say(channel, `@${user.username} ${responses[i]}`);
     }
   }
 }
