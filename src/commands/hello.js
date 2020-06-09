@@ -1,0 +1,1 @@
+module.exports = (client, channel, tags) => client.say(channel, `@${tags.username}, heya!`);

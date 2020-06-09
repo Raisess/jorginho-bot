@@ -25,7 +25,7 @@ module.exports = {
   },
   identity: {
     username: username,
-    password: `oauth:${password}`
+    password: password
   },
   channels: channels
 };
