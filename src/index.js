@@ -18,7 +18,7 @@ client.on('chat', (channel, user, message, self) => {
   expressions(client, channel, user, message);
 
   for (let item of list) {
-    if (message.toLowerCase() === item.cmd) {
+    if (message.toLowerCase() === `!${item.cmd}`) {
       item.func(client, channel, user, message);
     }
   }

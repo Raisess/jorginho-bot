@@ -4,17 +4,17 @@ const clear = require('./clear');
 
 module.exports = [
   {
-    cmd: '!hello',
+    cmd: 'hello',
     description: 'Dizer Hello World!',
     func: (client, channel, user) => hello(client, channel, user)
   },
   {
-    cmd: '!ban',
+    cmd: 'ban',
     description: 'Banir um úsuario do chat!',
     func: (client, channel, user, message) => ban(client, channel, user, message)
   },
   {
-    cmd: '!clear',
+    cmd: 'clear',
     description: 'Limpar as mensagens do chat!',
     func: (client, channel, user) => clear(client, channel, user)
   }
