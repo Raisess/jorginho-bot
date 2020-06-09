@@ -1,0 +1,5 @@
+{
+  "USERNAME": "<bot-account-username>",
+  "PASSWORD": "<bot-account-password>",
+  "CHANNELS": ["...<bot-channels-array>"]
+}
