@@ -1,0 +1,23 @@
+{
+  "name": "jorginho-bot",
+  "version": "1.0.0",
+  "description": "A open-source twitch bot",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raisess/jorginho-bot.git"
+  },
+  "author": "Raisess",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Raisess/jorginho-bot/issues"
+  },
+  "homepage": "https://github.com/Raisess/jorginho-bot#readme",
+  "dependencies": {
+    "twitch": "^4.0.10",
+    "twitch-chat-client": "^4.0.10"
+  }
+}
