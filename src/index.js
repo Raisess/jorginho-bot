@@ -15,7 +15,7 @@ const expressions = require('./modules/expressions');
 client.on('chat', (channel, user, message, self) => {
   if (self) return;
 
-  expressions();
+  expressions(client, channel, user, message);
 
   for (let item of list) {
     if (message.toLowerCase() === item.cmd) {
