@@ -9,13 +9,17 @@ client.connect();
 
 // command list
 const list = require('./commands/list');
+// chat expressions module
+const expressions = require('./modules/expressions');
 
-client.on('message', (channel, tags, message, self) => {
+client.on('chat', (channel, user, message, self) => {
   if (self) return;
 
+  expressions();
+
   for (let item of list) {
-    if (message.toLowerCase() === `!${item.cmd}`) {
-      item.func(client, channel, tags);
+    if (message.toLowerCase() === item.cmd) {
+      item.func(client, channel, user, message);
     }
   }
 
@@ -23,9 +27,15 @@ client.on('message', (channel, tags, message, self) => {
     let str = [];
 
     for (let item of list) {
-      str.push(`cmd: !${item.cmd} - description: ${item.description}\n`)
+      if (item.cmd[0] === '!') {
+        str.push(`cmd: !${item.cmd} - description: ${item.description}\n`);
+      }
     }
 
     client.say(channel, str.join(' '));
   }
+});
+
+client.on('connected', () => {
+  client.say(config.channels[0], 'Hello World! JorginhoBOT is on!');
 });
