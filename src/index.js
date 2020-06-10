@@ -17,8 +17,11 @@ client.on('chat', (channel, user, message, self) => {
 
   expressions(client, channel, user, message);
 
+  const msgSplited = message.toLowerCase().split(' ');
+  const cmd = msgSplited[0];
+
   for (let item of list) {
-    if (message.toLowerCase() === `!${item.cmd}`) {
+    if (cmd === `!${item.cmd}`) {
       item.func(client, channel, user, message);
     }
   }

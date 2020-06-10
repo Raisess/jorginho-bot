@@ -24,7 +24,7 @@ module.exports = [
   {
     cmd: 'ban',
     description: 'Banir um úsuario do chat!',
-    func: (client, channel, user) => ban(client, channel, user, owner)
+    func: (client, channel, user, message) => ban(client, channel, user, message, owner)
   },
   {
     cmd: 'clear',
