@@ -5,17 +5,20 @@ const clear = require('./clear');
 const color = require('./color');
 const colorList = require('./colorList');
 const dice = require('./dice');
+const social = require('./social');
 
 // bot owner
-let owner;
+let owner, socials;
 
 // check the credencials file
 if (require('../credencials.json')) {
-  const { OWNER } = require('../credencials.json');
+  const { OWNER, SOCIALS } = require('../credencials.json');
   owner = OWNER;
+  socials = SOCIALS;
 } else if (require('../credencials.template.json')) {
-  const { OWNER } = require('../credencials.template.json');
+  const { OWNER, SOCIALS } = require('../credencials.template.json');
   onwer = OWNER;
+  socials = SOCIALS;
 } else {
   throw new Error('credencials file not found! [credencials.json || credencials.template.json]');
 }
@@ -50,5 +53,10 @@ module.exports = [
     cmd: 'clear',
     description: 'Limpar as mensagens do chat!',
     func: (client, channel, user) => clear(client, channel, user, owner)
+  },
+  {
+    cmd: 'social',
+    description: 'Redes sociais do streamer',
+    func: (client, channel) => social(client, channel, socials)
   }
 ]
