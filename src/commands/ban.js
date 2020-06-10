@@ -1,7 +1,7 @@
-module.exports = (client, channel, user, message) => {
-  if (user.mod) {
-    client.say(channel, 'true');
-  } else {
-    client.say(channel, 'false');
+module.exports = (client, channel, user, owner) => {
+  if (user.mod || user.username.toLowerCase() === owner) {
+    return client.say(channel, 'true');
   }
+
+  return client.say(channel, 'false');
 }
