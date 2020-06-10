@@ -27,9 +27,7 @@ client.on('chat', (channel, user, message, self) => {
     let str = [];
 
     for (let item of list) {
-      if (item.cmd[0] === '!') {
-        str.push(`cmd: !${item.cmd} - description: ${item.description}\n`);
-      }
+      str.push(`cmd: !${item.cmd} - description: ${item.description} | `);
     }
 
     client.say(channel, str.join(' '));

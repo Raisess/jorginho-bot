@@ -1,5 +1,6 @@
 {
   "USERNAME": "<bot-account-username>",
   "PASSWORD": "<bot-account-password-token | make this pass token here: https://twitchapps.com/tmi/>",
-  "CHANNELS": ["...<bot-channels-array>"]
+  "CHANNELS": ["...<bot-channels-array>"],
+  "OWNER": "<streamer-account-username>"
 }
