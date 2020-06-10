@@ -19,7 +19,7 @@ ou clique duas vezes sobre o arquivo **install.bat**.
 Para rodar o bot use o comando:
 
 ```shell
-  npm install
+  npm start
 ```
 
 ou clique duas vezes sobre o arquivo **run.bat**.
