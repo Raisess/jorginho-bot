@@ -31,17 +31,17 @@ module.exports = [
   },
   {
     cmd: 'color',
-    description: 'Mudar a cor do bot',
+    description: 'Mudar a cor do bot.',
     func: (client, channel, user, message) => color(client, channel, user, message)
   },
   {
     cmd: 'colorlist',
-    description: 'Ver a lista de cores do bot',
+    description: 'Ver a lista de cores do bot.',
     func: (client, channel) => colorList(client, channel)
   },
   {
     cmd: 'dice',
-    description: 'Girar um dado de seis lados',
+    description: 'Girar um dado de seis lados.',
     func: (client, channel, user) => dice(client, channel, user)
   },
   {
@@ -56,7 +56,7 @@ module.exports = [
   },
   {
     cmd: 'social',
-    description: 'Redes sociais do streamer',
+    description: 'Redes sociais do streamer.',
     func: (client, channel) => social(client, channel, socials)
   }
 ]
