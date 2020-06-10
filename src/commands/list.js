@@ -1,7 +1,10 @@
+// bot commands
 const hello = require('./hello');
 const ban = require('./ban');
 const clear = require('./clear');
+const color = require('./color');
 
+// bot owner
 let owner;
 
 // check the credencials file
@@ -20,6 +23,11 @@ module.exports = [
     cmd: 'hello',
     description: 'Dizer Hello World!',
     func: (client, channel, user) => hello(client, channel, user)
+  },
+  {
+    cmd: 'color',
+    description: 'Mudar a cor do bot',
+    func: (client, channel, user, message) => color(client, channel, user, message)
   },
   {
     cmd: 'ban',
