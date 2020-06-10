@@ -1,6 +1,6 @@
 const tmi = require("tmi.js");
 // BOT config
-const config = require("./config");
+const config = require('./config');
 
 // twitch client instance
 const client = new tmi.client(config);
