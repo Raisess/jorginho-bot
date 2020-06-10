@@ -3,6 +3,7 @@ const hello = require('./hello');
 const ban = require('./ban');
 const clear = require('./clear');
 const color = require('./color');
+const colorList = require('./colorList');
 
 // bot owner
 let owner;
@@ -28,6 +29,11 @@ module.exports = [
     cmd: 'color',
     description: 'Mudar a cor do bot',
     func: (client, channel, user, message) => color(client, channel, user, message)
+  },
+  {
+    cmd: 'colorlist',
+    description: 'Ver a lista de cores do bot',
+    func: (client, channel) => colorList(client, channel)
   },
   {
     cmd: 'ban',
