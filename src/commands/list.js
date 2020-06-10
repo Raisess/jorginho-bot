@@ -4,6 +4,7 @@ const ban = require('./ban');
 const clear = require('./clear');
 const color = require('./color');
 const colorList = require('./colorList');
+const dice = require('./dice');
 
 // bot owner
 let owner;
@@ -22,7 +23,7 @@ if (require('../credencials.json')) {
 module.exports = [
   {
     cmd: 'hello',
-    description: 'Dizer Hello World!',
+    description: 'Dizer hello!',
     func: (client, channel, user) => hello(client, channel, user)
   },
   {
@@ -34,6 +35,11 @@ module.exports = [
     cmd: 'colorlist',
     description: 'Ver a lista de cores do bot',
     func: (client, channel) => colorList(client, channel)
+  },
+  {
+    cmd: 'dice',
+    description: 'Girar um dado de seis lados',
+    func: (client, channel, user) => dice(client, channel, user)
   },
   {
     cmd: 'ban',
