@@ -34,3 +34,4 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * **MOD** !ban < username > - Banir um úsuario do chat!
 * **MOD** !clear - Limpar as mensagens do chat!
 * !social - Redes sociais do streamer.
+* !git - Link do github do streamer.
