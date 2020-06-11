@@ -61,7 +61,37 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * **MOD** !clear - Limpar as mensagens do chat!
 * !social - Redes sociais do streamer.
 * !git - Link do github do streamer.
-* !jorge - Link para baixar o bot jorginho. 
+* !jorge - Link para baixar o bot jorginho.
 
 ## 🛠 Criando novos comandos
 
+Os comandos do Jorge nada são do que apenas modulos CommomJS, para criar um novo modulo é fácil.
+Todos os comandos do Jorge devem ficar na Pasta **commands**, onde fica o arquivo **list.js** que é o controlador do comandos.
+
+Estrutura de um comando:
+
+```javascript
+  // comando hello.js
+  module.exports = (client, channel, user) => client.say(
+    channel,
+    `hello @${user.username}!`
+  );
+```
+
+Agora veja como fica a estrutura no modulo **list** do arquivo **list.js**:
+```javascript
+  const hello = require('./hello');
+
+  module.exports = [
+    {
+      cmd: 'hello', // nome do comando | no chat fica: !hello (se o prefixo definido para "!")
+      description: 'Dizer hello!', // descrição do comando
+      // função de callback executada pelo comando
+      func: (client, channel, user) => hello(
+        client,
+        channel,
+        user
+      )
+    }
+  ]
+```
