@@ -116,7 +116,7 @@ A função de callback do comando recebe **quatro** parâmetros por padrão:
   ]
 ```
 
-Sobre os parâmetros:
+Sobre os parâmetros da função de callback:
 
 * client - É o parametro que executa as funções do cliente (bot), ou seja, enviar mensagens (client.say(canal< string >, mensagem< string >)).
 * channel - É a variável que armazena o canal onde o comando foi executado, um exemplo de uso dela é na função **client.say(channel, msg)**, onde ela deve ser o **primeiro parâmetro da função**.
