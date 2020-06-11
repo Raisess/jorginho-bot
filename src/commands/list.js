@@ -6,19 +6,22 @@ const color = require('./color');
 const colorList = require('./colorList');
 const dice = require('./dice');
 const social = require('./social');
+const git = require('./git');
 
 // bot owner
-let streamer, socials;
+let streamer, socials, gitLink;
 
 // check the credencials file
 if (require('../credencials.json')) {
-  const { STREAMER, SOCIALS } = require('../credencials.json');
+  const { STREAMER, SOCIALS, GIT } = require('../credencials.json');
   streamer = STREAMER;
   socials = SOCIALS;
+  gitLink = GIT;
 } else if (require('../credencials.template.json')) {
-  const { STREAMER, SOCIALS } = require('../credencials.template.json');
+  const { STREAMER, SOCIALS, GIT } = require('../credencials.template.json');
   streamer = STREAMER;
   socials = SOCIALS;
+  gitLink = GIT;
 } else {
   throw new Error('credencials file not found! [credencials.json || credencials.template.json]');
 }
@@ -58,5 +61,10 @@ module.exports = [
     cmd: 'social',
     description: 'Redes sociais do streamer.',
     func: (client, channel) => social(client, channel, socials)
+  },
+  {
+    cmd: 'git',
+    description: 'GitHub do streamer.',
+    func: (client, channel) => git(client, channel, streamer, gitLink)
   }
 ]
