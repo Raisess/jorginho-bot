@@ -18,4 +18,7 @@ const colorsList = [
 
 const msg = colorsList.join(' | ');
 
-module.exports = (client, channel) => client.say(channel, `list de cores: ${msg}`);
+module.exports = (client, channel) => client.say(
+  channel,
+  `list de cores: ${msg}`
+);
