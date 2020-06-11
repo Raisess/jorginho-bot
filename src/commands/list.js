@@ -8,16 +8,16 @@ const dice = require('./dice');
 const social = require('./social');
 
 // bot owner
-let owner, socials;
+let streamer, socials;
 
 // check the credencials file
 if (require('../credencials.json')) {
-  const { OWNER, SOCIALS } = require('../credencials.json');
-  owner = OWNER;
+  const { STREAMER, SOCIALS } = require('../credencials.json');
+  streamer = STREAMER;
   socials = SOCIALS;
 } else if (require('../credencials.template.json')) {
-  const { OWNER, SOCIALS } = require('../credencials.template.json');
-  onwer = OWNER;
+  const { STREAMER, SOCIALS } = require('../credencials.template.json');
+  streamer = STREAMER;
   socials = SOCIALS;
 } else {
   throw new Error('credencials file not found! [credencials.json || credencials.template.json]');
@@ -47,12 +47,12 @@ module.exports = [
   {
     cmd: 'ban',
     description: 'Banir um úsuario do chat!',
-    func: (client, channel, user, message) => ban(client, channel, user, message, owner)
+    func: (client, channel, user, message) => ban(client, channel, user, message, streamer)
   },
   {
     cmd: 'clear',
     description: 'Limpar as mensagens do chat!',
-    func: (client, channel, user) => clear(client, channel, user, owner)
+    func: (client, channel, user) => clear(client, channel, user, streamer)
   },
   {
     cmd: 'social',

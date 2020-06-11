@@ -1,5 +1,5 @@
-module.exports = (client, channel, user, owner) => {
-  if (user.mod || user.username.toLowerCase() === owner) {
+module.exports = (client, channel, user, streamer) => {
+  if (user.mod || user.username.toLowerCase() === streamer) {
     return client.clear(channel);
   }
 
