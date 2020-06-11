@@ -29,7 +29,8 @@ A estrutura do arquivo de credenciais é esta:
     "CHANNELS": ["...<bot-channels-array>"],
     "STREAMER": "<streamer-account-username>",
     "SOCIALS": ["<twitter-user>", "<instagram-user>"],
-    "GIT": "<streamer-github-username>"
+    "GIT": "<streamer-github-username>",
+    "PREFIX": "<bot-prefix-simbol | default: !>"
   }
 ```
 

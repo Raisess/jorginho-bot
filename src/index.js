@@ -1,6 +1,20 @@
 const tmi = require("tmi.js");
 // BOT config
 const config = require('./config');
+// BOT prefix
+let prefix;
+
+if (require('./credencials.json')) {
+  const { PREFIX } = require('./credencials.json');
+
+  prefix = PREFIX;
+} else if (require('./credencials.template.json')) {
+  const { PREFIX } = require('./credencials.template.json');
+
+  prefix = PREFIX;
+} else {
+  throw new Error('credencials file not found! [credencials.json || credencials.template.json]');
+}
 
 // twitch client instance
 const client = new tmi.client(config);
@@ -21,7 +35,7 @@ client.on('chat', (channel, user, message, self) => {
   const cmd = msgSplited[0];
 
   for (let item of list) {
-    if (cmd === `!${item.cmd}`) {
+    if (cmd === `${prefix}${item.cmd}`) {
       item.func(client, channel, user, message);
     }
   }
