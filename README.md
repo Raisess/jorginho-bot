@@ -61,6 +61,7 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * **MOD** !clear - Limpar as mensagens do chat!
 * !social - Redes sociais do streamer.
 * !git - Link do github do streamer.
+* !jorge - Link para baixar o bot jorginho. 
 
 ## 🛠 Criando novos comandos
 

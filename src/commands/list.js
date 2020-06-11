@@ -7,6 +7,7 @@ const colorList = require('./colorList');
 const dice = require('./dice');
 const social = require('./social');
 const git = require('./git');
+const bot = require('./bot');
 
 // bot owner
 let streamer, socials, gitLink;
@@ -117,6 +118,14 @@ module.exports = [
       channel,
       streamer,
       gitLink
+    )
+  },
+  {
+    cmd: 'jorge',
+    description: 'Link para baixar o bot jorginho.',
+    func: (client, channel) => bot(
+      client,
+      channel
     )
   }
 ]

@@ -9,4 +9,7 @@ const dice = () => {
 };
 
 
-module.exports = (client, channel, user) => client.say(channel, `@${user.username} 🎲: ${dice()}`);
+module.exports = (client, channel, user) => client.say(
+  channel,
+  `@${user.username} 🎲: ${dice()}`
+);
