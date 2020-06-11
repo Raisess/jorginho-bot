@@ -4,7 +4,7 @@
 
 * [NodeJS versão LTS](https://nodejs.org/en/download/)
 
-## Instalar e rodar
+## Instalando
 
 Baixe o bot no [repositório oficial](https://github.com/Raisess/jorginho-bot).
 
@@ -15,6 +15,31 @@ Extraia os arquivos, entre na pasta do bot e em seguida use o comando:
 ```
 
 ou clique duas vezes sobre o arquivo **install.bat**.
+
+## Configurando o bot
+
+O bot vem com um arquivo chamado **credencials.template.json** dentro da pasta **src**, você pode usá-lo como o arquivo de configuração ou criar um arquivo chamado **credencials.json** no mesmo diretório para ignorar o arquivo template.
+
+A estrutura do arquivo de credenciais é esta:
+
+```json
+  {
+    "USERNAME": "<bot-account-username>",
+    "PASSWORD": "<bot-account-password-token | make this pass token here: https://twitchapps.com/tmi/>",
+    "CHANNELS": ["...<bot-channels-array>"],
+    "STREAMER": "<streamer-account-username>",
+    "SOCIALS": ["<twitter-user>", "<instagram-user>"],
+    "GIT": "<streamer-github-username>"
+  }
+```
+
+*O USERNAME é o nome da conta do bot que pode ser a sua própira conta se preferir.*
+
+*O PASSWORD do bot é um token que pode ser gerado [aqui](https://twitchapps.com/tmi/).*
+
+*O campo CHANNELS é um array que contém os canais do chat **use o nome do seu perfil na twitch por exemplo**.*
+
+## Rodando
 
 Para rodar o bot use o comando:
 
