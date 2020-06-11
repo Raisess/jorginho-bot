@@ -95,3 +95,30 @@ Agora veja como fica a estrutura no modulo **list** do arquivo **list.js**:
     }
   ]
 ```
+
+A função de callback do comando recebe **quatro** parâmetros por padrão:
+
+```javascript
+  // ...
+
+  module.exports = [
+    {
+      cmd: '<name>',
+      description: '<description>',
+      // função de callback executada pelo comando
+      func: (client, channel, user, message) => command(
+        client,
+        channel,
+        user,
+        message
+      )
+    }
+  ]
+```
+
+Sobre os parâmetros:
+
+* client - É o parametro que executa as funções do cliente (bot), ou seja, enviar mensagens (client.say(canal< string >, mensagem< string >)).
+* channel - É a variável que armazena o canal onde o comando foi executado, um exemplo de uso dela é na função **client.say(channel, msg)**, onde ela deve ser o **primeiro parâmetro da função**.
+* user - armazena os dados do usuário que executou o comando, por exemplo **user.username** entrega o nome do usuário.
+* message - armazena a mensagem enviada pelo usuário.
