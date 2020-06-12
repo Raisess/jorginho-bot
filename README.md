@@ -1,10 +1,10 @@
-# 🤖 JORGINHOBOT DOCS
+# JORGINHOBOT DOCS 🤖
 
-## 🔮 Requisitos
+## Requisitos 🔮
 
 * [NodeJS versão LTS](https://nodejs.org/en/download/)
 
-## 💡 Instalando
+## Instalando 💡
 
 Baixe o bot no [repositório oficial](https://github.com/Raisess/jorginho-bot).
 
@@ -16,7 +16,7 @@ Extraia os arquivos, entre na pasta do bot e em seguida use o comando:
 
 ou clique duas vezes sobre o arquivo **install.bat**.
 
-## ⚙ Configurando o bot
+## Configurando o bot ⚙
 
 O bot vem com um arquivo chamado **credencials.template.json** dentro da pasta **src**, você pode usá-lo como o arquivo de configuração ou criar um arquivo chamado **credencials.json** no mesmo diretório para ignorar o arquivo template.
 
@@ -40,7 +40,7 @@ A estrutura do arquivo de credenciais é esta:
 
 *O campo CHANNELS é um array que contém os canais do chat **use o nome do seu perfil na twitch por exemplo**.*
 
-## 🚀 Rodando
+## Rodando 🚀
 
 Para rodar o bot use o comando:
 
@@ -50,7 +50,7 @@ Para rodar o bot use o comando:
 
 ou clique duas vezes sobre o arquivo **run.bat**.
 
-## 🕹 Comandos padrão
+## Comandos padrão 🕹
 
 * !help - Ver a lista de comandos do bot.
 * !hello - Dizer hello!
@@ -63,7 +63,7 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * !git - Link do github do streamer.
 * !jorge - Link para baixar o bot jorginho.
 
-## 🛠 Criando novos comandos
+## Criando novos comandos 🛠
 
 Os comandos do Jorge nada são do que apenas modulos CommomJS, para criar um novo modulo é fácil.
 Todos os comandos do Jorge devem ficar na Pasta **commands**, onde fica o arquivo **list.js** que é o controlador do comandos.
@@ -122,3 +122,36 @@ Sobre os parâmetros da função de callback:
 * channel - É a variável que armazena o canal onde o comando foi executado, um exemplo de uso dela é na função **client.say(channel, msg)**, onde ela deve ser o **primeiro parâmetro da função**.
 * user - armazena os dados do usuário que executou o comando, por exemplo **user.username** entrega o nome do usuário.
 * message - armazena a mensagem enviada pelo usuário.
+
+## Expressions e Response 🤓
+
+As **expressions** podem ser qualquer palavra ou frase pré defina que tem uma respota pré definida, chamada de **response**, por exemplo:
+
+```
+  fulano: osh
+  jorginhobot: osh
+  fulano: oi
+  jorginhobot: oi, bom dia
+```
+
+Essas palavras ou frases são definidas nos respectivos arquivos **expressions.json** e **responses.json** que estão na pasta **data**.
+
+Esses dados estão salvos no formato de array, ex:
+
+Arquivo expressions.json:
+```json
+  [
+    "osh",
+    "oi"
+  ]
+```
+
+Arquivo responses.json:
+```json
+  [
+    "osh",
+    "oi, bom dia"
+  ]
+```
+
+Onde as **expressions** devem estar de acordo com as **responses** isso em relação ao indice de busca de um array, o primeiro indice, no exemplo *"osh"*, é o mesmo em ambos os arquivos o que significa que quando a palavra *"osh"* for dita no chat o bot irá responder também com *"osh"*.
