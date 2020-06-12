@@ -123,7 +123,7 @@ Sobre os parâmetros da função de callback:
 * user - armazena os dados do usuário que executou o comando, por exemplo **user.username** entrega o nome do usuário.
 * message - armazena a mensagem enviada pelo usuário.
 
-## Expressions e Response 🤓
+## Expressions e Responses 🤓
 
 As **expressions** podem ser qualquer palavra ou frase pré defina que tem uma respota pré definida, chamada de **response**, por exemplo:
 
