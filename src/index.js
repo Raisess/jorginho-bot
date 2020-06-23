@@ -54,3 +54,7 @@ client.on('chat', (channel, user, message, self) => {
 client.on('connected', () => {
   client.say(config.channels[0], 'Hello World! JorginhoBOT is on!');
 });
+
+setInterval(() => {
+  client.say(config.channels[0], 'Se vc tbm quer o JorginhoBOT no seu site digite !jorge para baixar e usar!!! by danillu_');
+}, 5 * 60000);
