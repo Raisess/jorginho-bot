@@ -60,8 +60,9 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * **MOD** !ban < username > - Banir um úsuario do chat!
 * **MOD** !clear - Limpar as mensagens do chat!
 * !social - Redes sociais do streamer.
-* !git - Link do github do streamer.
+* !git - Link do github do criador do bot (eu hehe).
 * !jorge - Link para baixar o bot jorginho.
+* !morreu - Aumentar o número de vezes que o streamer morreu no game.
 
 ## 🛠 Criando novos comandos
 
