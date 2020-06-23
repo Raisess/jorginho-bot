@@ -8,6 +8,7 @@ const dice = require('./dice');
 const social = require('./social');
 const git = require('./git');
 const bot = require('./bot');
+const dead = require('./dead');
 
 // bot owner
 let streamer, socials, gitLink;
@@ -115,9 +116,7 @@ module.exports = [
     description: 'GitHub do streamer.',
     func: (client, channel) => git(
       client,
-      channel,
-      streamer,
-      gitLink
+      channel
     )
   },
   {
@@ -126,6 +125,15 @@ module.exports = [
     func: (client, channel) => bot(
       client,
       channel
+    )
+  },
+  {
+    cmd: 'morreu',
+    description: 'Vezes que o streamer morreu.',
+    func: (client, channel) => dead(
+      client,
+      channel,
+      streamer
     )
   }
 ]

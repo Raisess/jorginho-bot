@@ -4,6 +4,5 @@
   "CHANNELS": ["...<bot-channels-array>"],
   "STREAMER": "<streamer-account-username>",
   "SOCIALS": ["<your-instagram-user>", "<your-twitter-user>"],
-  "GIT": "<streamer-github-username>",
   "PREFIX": "!"
 }
