@@ -3,7 +3,7 @@
   "PASSWORD": "<bot-account-password-token | make this pass token here: https://twitchapps.com/tmi/>",
   "CHANNELS": ["...<bot-channels-array>"],
   "STREAMER": "<streamer-account-username>",
-  "SOCIALS": ["<twitter-user>", "<instagram-user>"],
+  "SOCIALS": ["<your-instagram-user>", "<your-twitter-user>"],
   "GIT": "<streamer-github-username>",
   "PREFIX": "!"
 }
