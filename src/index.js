@@ -29,7 +29,8 @@ const expressions = require('./modules/expressions');
 client.on('chat', (channel, user, message, self) => {
   if (self) return;
 
-  expressions(client, channel, user, message);
+  // expressions module init
+  expressions(client, channel, message);
 
   const msgSplited = message.toLowerCase().split(' ');
   const cmd = msgSplited[0];
@@ -55,6 +56,7 @@ client.on('connected', () => {
   client.say(config.channels[0], 'Hello World! JorginhoBOT is on!');
 });
 
+// spam loop
 setInterval(() => {
   client.say(config.channels[0], 'Se vc tbm quer o JorginhoBOT na sua live, digite !jorge para baixar e usar!!! by danillu_');
-}, 5 * 60000);
+}, 10 * 60000);
