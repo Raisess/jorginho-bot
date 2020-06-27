@@ -9,21 +9,20 @@ const social = require('./social');
 const git = require('./git');
 const bot = require('./bot');
 const dead = require('./dead');
+const uptime = require('./uptime');
 
 // bot owner
-let streamer, socials, gitLink;
+let streamer, socials;
 
 // check the credencials file
 if (require('../credencials.json')) {
-  const { STREAMER, SOCIALS, GIT } = require('../credencials.json');
+  const { STREAMER, SOCIALS } = require('../credencials.json');
   streamer = STREAMER;
   socials = SOCIALS;
-  gitLink = GIT;
 } else if (require('../credencials.template.json')) {
-  const { STREAMER, SOCIALS, GIT } = require('../credencials.template.json');
+  const { STREAMER, SOCIALS } = require('../credencials.template.json');
   streamer = STREAMER;
   socials = SOCIALS;
-  gitLink = GIT;
 } else {
   throw new Error('credencials file not found! [credencials.json || credencials.template.json]');
 }
@@ -131,6 +130,15 @@ module.exports = [
     cmd: 'morreu',
     description: 'Vezes que o streamer morreu.',
     func: (client, channel) => dead(
+      client,
+      channel,
+      streamer
+    )
+  },
+  {
+    cmd: 'uptime',
+    description: 'Tempo da live.',
+    func: (client, channel) => uptime(
       client,
       channel,
       streamer
