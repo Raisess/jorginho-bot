@@ -14,11 +14,11 @@ Extraia os arquivos, entre na pasta do bot e em seguida use o comando:
   npm install
 ```
 
-ou clique duas vezes sobre o arquivo **install.bat**.
+**ou** clique duas vezes sobre o arquivo **install.bat**.
 
 ## ⚙ Configurando o bot
 
-O bot vem com um arquivo chamado **credencials.template.json** dentro da pasta **src**, você pode usá-lo como o arquivo de configuração ou criar um arquivo chamado **credencials.json** no mesmo diretório para ignorar o arquivo template.
+O bot vem com um arquivo chamado **credencials.template.json** dentro da pasta **src**, você pode deve criar um arquivo chamado **credencials.json** no mesmo diretório baseado no arquivo template.
 
 A estrutura do arquivo de credenciais é esta:
 
@@ -28,8 +28,7 @@ A estrutura do arquivo de credenciais é esta:
     "PASSWORD": "<bot-account-password-token | make this pass token here: https://twitchapps.com/tmi/>",
     "CHANNELS": ["...<bot-channels-array>"],
     "STREAMER": "<streamer-account-username>",
-    "SOCIALS": ["<twitter-user>", "<instagram-user>"],
-    "GIT": "<streamer-github-username>",
+    "SOCIALS": ["<instagram-user>", "<twitter-user>"],
     "PREFIX": "<bot-prefix-simbol | default: !>"
   }
 ```
@@ -48,7 +47,7 @@ Para rodar o bot use o comando:
   npm start
 ```
 
-ou clique duas vezes sobre o arquivo **run.bat**.
+**ou** clique duas vezes sobre o arquivo **run.bat**.
 
 ## 🕹 Comandos padrão
 
