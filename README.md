@@ -64,6 +64,7 @@ ou clique duas vezes sobre o arquivo **run.bat**.
 * !jorge - Link para baixar o bot jorginho.
 * !morreu - Aumentar o número de vezes que o streamer morreu no game.
 * !uptime - Tempo da live.
+* !followage - Ver a quanto tempo segue o streamer.
 
 ## 🛠 Criando novos comandos
 

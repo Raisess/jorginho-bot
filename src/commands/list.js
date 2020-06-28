@@ -10,6 +10,7 @@ const git = require('./git');
 const bot = require('./bot');
 const dead = require('./dead');
 const uptime = require('./uptime');
+const followage = require('./followage');
 
 // bot owner
 let streamer, socials;
@@ -143,5 +144,15 @@ module.exports = [
       channel,
       streamer
     )
-  }
+  },
+  {
+    cmd: 'followage',
+    description: 'Ver a quanto tempo segue o streamer.',
+    func: (client, channel, user) => followage(
+      client,
+      channel,
+      user,
+      streamer
+    )
+  },
 ]
